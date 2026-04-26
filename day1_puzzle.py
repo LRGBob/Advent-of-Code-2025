@@ -1,9 +1,12 @@
-f = open('puzzle_input.txt', 'r')
+f = open('puzzle_sample.txt', 'r')
+
 lines = f.readlines()
 items = list(range(100))
 length = len(items)
+
 starting_value = 50
 count = 0
+
 for instruction in lines:
     rotation = instruction.strip().split()
     for char in rotation:
