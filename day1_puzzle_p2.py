@@ -15,9 +15,8 @@ for instruction in lines:
             count += (starting_value + value) // length
             starting_value = (starting_value + value) % length
         elif direction == 'L':
-            if value > starting_value:
-                count += (value - starting_value - 1) // length + 1
+            count += (((length - starting_value) % length) + value) // length
             starting_value = (starting_value - value) % length
-            pass
+
 print(count)
 f.close()
